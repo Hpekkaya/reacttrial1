@@ -1,34 +1,43 @@
-import { useState } from 'react';
-import Props from './01-Props/Props';
+import React,{useState} from 'react';
 import './App.css';
-import Container from './00-Components/Container';
 import Content from './00-Components/Content';
+
+const tema={
+  dark :{
+    color :"white",
+    backgroundColor : "black"
+  },
+  light :{
+    color :"black",
+    backgroundColor : "white"
+  }
+}
+export const TematicData = React.createContext(); //This should assigned here (outside of function)
 
 function App() {
 
-  // const [header, setHeader]=useState("I am learning React")
-  // const number = 1970
-
+  const [deger,setDeger]=useState("Kerem Nadir Pekkaya")
+  function change(){
+    if(tema.dark===deger) {setDeger(tema.light); console.log(deger)}
+    else {setDeger(tema.dark); console.log(deger)}
+  }
+  
   return (
     <div className="App">      
-      {/* <Container title = {header} num = {number} />  
-      <button onClick={()=>{setHeader("It has changed....")}}>Change</button> */}
+       <button onClick={change}>
+        {tema.dark ===deger ? "Light" : "Dark"}
+        </button> 
 
-      <Content/>
+      <TematicData.Provider value={deger}>
+          <Content/>  
+      </TematicData.Provider>
 
 
     </div>
   );
 }
 
-// function Container(props){
-//   return(
-//     <div style={{width:"300px", height:"300px",border:"2px solid brown", margin:"0px, auto"}}>
-//       <p>{props.title}</p>
-//       <p>{props.num}</p>
-//     </div>
-//   )
-// }
+
 
 
 export default App;
