@@ -12,7 +12,9 @@ function App() {
     <div className="App">      
         
       <Container title = {header} num = {number} />  
+      <button onClick={()=>{setHeader("It has changed....")}}>Change</button>
       
+
     </div>
   );
 }
