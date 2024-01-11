@@ -2,18 +2,20 @@ import { useState } from 'react';
 import Props from './01-Props/Props';
 import './App.css';
 import Container from './00-Components/Container';
+import Content from './00-Components/Content';
 
 function App() {
 
-  const [header, setHeader]=useState("I am learning React")
-  const number = 1970
+  // const [header, setHeader]=useState("I am learning React")
+  // const number = 1970
 
   return (
     <div className="App">      
-        
-      <Container title = {header} num = {number} />  
-      <button onClick={()=>{setHeader("It has changed....")}}>Change</button>
-      
+      {/* <Container title = {header} num = {number} />  
+      <button onClick={()=>{setHeader("It has changed....")}}>Change</button> */}
+
+      <Content/>
+
 
     </div>
   );
