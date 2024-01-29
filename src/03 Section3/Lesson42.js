@@ -7,7 +7,7 @@ function genRandomInt(max) {
     return Math.floor(Math.random() * (max + 1));
   }
 
-const Leeson42 = () => {
+const Lesson42 = () => {
   const description = reactDescriptions[genRandomInt(2)];
   return (
     <header>
@@ -22,4 +22,4 @@ const Leeson42 = () => {
   )
 }
 
-export default Leeson42
+export default Lesson42
