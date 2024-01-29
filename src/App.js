@@ -1,5 +1,5 @@
 import React from "react";
-import Lesson42P from "./03 Section3/Lesson42P";
+import Lesson43 from "./03 Section3/Lesson43";
 
 
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       {/* <Lesson39/>    */}
-      <Lesson42P/>
+      <Lesson43/>
     </div>
   );
 }
